@@ -7,7 +7,7 @@ const CountdownTimer = ({ resetCount }) => (
     <CountdownCircleTimer
         key={resetCount}
         isPlaying
-        duration={60 * .1}
+        duration={60 * .5}
         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
         colorsTime={[resetCount*.6, resetCount*.3, resetCount*.1, 0]}
         onComplete={() => {sendText('Your laundry is finished!')}}
