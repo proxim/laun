@@ -6,7 +6,9 @@ const TimerScreen = ({ navigation }) => {
     const [resetCount, setResetCount] = useState(0);
     return (
         <SafeAreaView style={styles.container}>
+            
         <CountdownTimer resetCount={resetCount}/>
+
         <Button title='restart' onPress={() => setResetCount(prevCount => prevCount + 1)}/>
         <Button
             title='go to sample screen'
