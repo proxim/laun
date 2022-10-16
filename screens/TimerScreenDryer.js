@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Button, StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import CountdownTimer from '../components/CountdownTimer';
+import AppButton from '../components/AppButton';
 
 const TimerScreenDryer = ({ navigation }) => {
     const [resetCount, setResetCount] = useState(0);
-
     //<Button title='restart' onPress={() => setResetCount(prevCount => prevCount + 1)}/>}
     
     return (
@@ -13,11 +13,11 @@ const TimerScreenDryer = ({ navigation }) => {
         <CountdownTimer resetCount={resetCount}/>
 
         
-        <Button
+        <AppButton
             title='Collect laundry'
             onPress={() =>
                 // go to thank you page
-                navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
+                navigation.navigate('ThankYou')
             }
         />
 

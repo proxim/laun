@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import { Button, StyleSheet, Text, SafeAreaView } from 'react-native';
+import LText from '../components/LText';
+import AppButton from '../components/AppButton';
 
 const ThankYouScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>Thank you for moving someone’s laundry!</Text>
+            <LText>Thank you for collecting your laundry!</LText>
+            <AppButton 
+              title='return Home'
+              onPress={() =>
+                navigation.navigate('Dash', 'Dashboard')
+              } 
+            />
         </SafeAreaView>
     );
   };
@@ -24,12 +32,6 @@ const ThankYouScreen = ({ navigation }) => {
       margin: 50,
       alignItems: 'center',
       justifyContent: 'center'
-    },
-    text: {
-      fontSize: 25,
-      textAlign:'center',
-      fontFamily: 'Arial',
-      // fontWeight: 'bold',
     }
   });
 
