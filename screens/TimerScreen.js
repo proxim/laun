@@ -33,6 +33,10 @@ const TimerScreen = ({ navigation }) => {
             onPress={() =>
                 // go back to dashboard
                 navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
+        <AppButton
+            title='go to thank you screen'
+            onPress={() =>
+                navigation.navigate('ThankYou')
             }
         />
         </SafeAreaView>

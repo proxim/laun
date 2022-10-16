@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TimerScreen from './screens/TimerScreen';
 import SampleScreen from './screens/SampleScreen';
+import ThankYouScreen from './screens/ThankYouScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Timer" component={TimerScreen} />
         <Stack.Screen name="SampleScreen" component={SampleScreen} />
+        <Stack.Screen name="ThankYou" component={ThankYouScreen} />
       </Stack.Navigator>
 
     </NavigationContainer>
