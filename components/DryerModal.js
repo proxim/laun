@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import Modal from "react-native-modal";
 import AppButton from "./AppButton";
 
@@ -13,7 +13,7 @@ function DryerModal({ navigation }) {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={ styles.centeredView }>
         <AppButton 
             title="Available Dryers"
             onPress={toggleModal} />
@@ -58,4 +58,13 @@ function DryerModal({ navigation }) {
   );
 }
 
+const styles = StyleSheet.create({
+    centeredView: {
+      flex: -1,
+      justifyContent: "center",
+      alignItems: "center",
+      marginTop: 22
+    }
+  });
+  
 export default DryerModal;
