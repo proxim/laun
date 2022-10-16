@@ -6,7 +6,7 @@ import DryerModal from '../components/DryerModal';
 
 const Dashboard = ({ navigation }) => {
     return(
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.welcome}>
             <Text>Laundry Status</Text>
             <WasherModal 
                 navigation={navigation}
@@ -19,11 +19,14 @@ const Dashboard = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    },
+    welcome: {
+        fontSize: 50,
+        flex: 0.5,
+        justifyContent: "center",
+        textAlign: "center",
+        margin: 10,
+        fontFamily: "SFUIDisplay-Bold"
+    }
 });
 
 export default Dashboard;

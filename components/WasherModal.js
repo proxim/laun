@@ -17,7 +17,7 @@ function WasherModal({ navigation }) {
         onPress={toggleModal} />
 
       <Modal isVisible={isModalVisible}>
-        <View style={ styles.centeredView }>
+        <View style={{ flex: 1 }}>
           <Text>Hello!</Text>
           <AppButton 
             title="Washer 1"
