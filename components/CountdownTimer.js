@@ -14,7 +14,7 @@ const CountdownTimer = ({ resetCount }) => (
     >
     {({ remainingTime }) => 
     <Text style={styles.text}>
-        laundry done in{'\n'}
+        Laundry done in{'\n'}
         {new Date(remainingTime * 1000).toISOString().substring(14, 19)}
     </Text>}
   </CountdownCircleTimer>

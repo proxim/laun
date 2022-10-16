@@ -1,18 +1,37 @@
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import AppButton from '../components/AppButton';
 import CountdownTimer from '../components/CountdownTimer';
 
 const TimerScreen = ({ navigation }) => {
     const [resetCount, setResetCount] = useState(0);
+
+    //<Button title='restart' onPress={() => setResetCount(prevCount => prevCount + 1)}/>}
+    
     return (
         <SafeAreaView style={styles.container}>
-            
+
         <CountdownTimer resetCount={resetCount}/>
 
-        <Button title='restart' onPress={() => setResetCount(prevCount => prevCount + 1)}/>
-        <Button
+        
+        <AppButton
             title='go to sample screen'
             onPress={() =>
+                navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
+            }
+        />
+
+        <AppButton
+            title='Move laundry to dryer'
+            onPress={() =>
+                // go back to dashboard and pull up dryer selection
+                navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
+            }
+        />
+        <AppButton
+            title='Collect wet laundry'
+            onPress={() =>
+                // go back to dashboard
                 navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
             }
         />
