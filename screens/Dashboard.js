@@ -24,9 +24,7 @@ const styles = StyleSheet.create({
         flex: 0.5,
         justifyContent: "center",
         textAlign: "center",
-        margin: 10,
-        fontFamily: "SFUIDisplay-Bold"
-    }
+        }
 });
 
 export default Dashboard;
