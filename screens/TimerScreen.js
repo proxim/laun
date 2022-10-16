@@ -14,6 +14,12 @@ const TimerScreen = ({ navigation }) => {
                 navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
             }
         />
+        <Button
+            title='go to thank you screen'
+            onPress={() =>
+                navigation.navigate('ThankYou')
+            }
+        />
         </SafeAreaView>
     );
 };
