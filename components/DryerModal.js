@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import Modal from "react-native-modal";
+import AppButton from "./AppButton";
 
 
 // super inefficient but made two components lol
@@ -13,7 +14,7 @@ function DryerModal({ navigation }) {
 
   return (
     <View style={{ flex: 1 }}>
-        <Button 
+        <AppButton 
             title="Available Dryers"
             onPress={toggleModal} />
 
@@ -21,36 +22,36 @@ function DryerModal({ navigation }) {
         <View style={{ flex: 1 }}>
         <Text>Hello!</Text>
 
-        <Button 
+        <AppButton 
             title="Dryer 1"
             onPress={() => 
-                {navigation.navigate('Timer', 'TimerScreen');
+                {navigation.navigate('TimerDryer', 'TimerScreenDryer');
                 setModalVisible(false);}
             }
         />
-        <Button 
+        <AppButton 
             title="Dryer 2"
             onPress={() => 
-                {navigation.navigate('Timer', 'TimerScreen');
+                {navigation.navigate('TimerDryer', 'TimerScreenDryer');
                 setModalVisible(false);}
             }
         />
-        <Button 
+        <AppButton 
             title="Dryer 3"
             onPress={() => 
-                {navigation.navigate('Timer', 'TimerScreen');
-                 setModalVisible(false);}
+                {navigation.navigate('TimerDryer', 'TimerScreenDryer');
+                setModalVisible(false);}
             }
         />
-        <Button 
+        <AppButton 
             title="Dryer 4"
             onPress={() => 
-                {navigation.navigate('Timer', 'TimerScreen');
-                 setModalVisible(false);}
+                {navigation.navigate('TimerDryer', 'TimerScreenDryer');
+                setModalVisible(false);}
             }
         />
 
-        <Button title="Go Back" onPress={toggleModal} />
+        <AppButton title="Go Back" onPress={toggleModal} />
         </View>
     </Modal>
     </View>

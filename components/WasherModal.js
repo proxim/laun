@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import Modal from "react-native-modal";
+import AppButton from "./AppButton";
 
 function WasherModal({ navigation }) {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -11,35 +12,35 @@ function WasherModal({ navigation }) {
 
   return (
     <View style={{ flex: 1 }}>
-      <Button 
+      <AppButton 
         title="Available Washers"
         onPress={toggleModal} />
 
       <Modal isVisible={isModalVisible}>
         <View style={{ flex: 1 }}>
           <Text>Hello!</Text>
-          <Button 
+          <AppButton 
             title="Washer 1"
             onPress={() => 
                 {navigation.navigate('Timer', 'TimerScreen');
                  setModalVisible(false);}
             }
         />
-          <Button 
+          <AppButton 
             title="Washer 2"
             onPress={() => 
                 {navigation.navigate('Timer', 'TimerScreen');
                 setModalVisible(false);}
             }
         />
-          <Button 
+          <AppButton 
             title="Washer 3"
             onPress={() => 
               {navigation.navigate('Timer', 'TimerScreen');
               setModalVisible(false);}
             }
         />
-          <Button 
+          <AppButton 
             title="Washer 4"
             onPress={() => 
               {navigation.navigate('Timer', 'TimerScreen');
@@ -47,7 +48,7 @@ function WasherModal({ navigation }) {
             }
         />
 
-          <Button title="Go Back" onPress={toggleModal} />
+          <AppButton title="Go Back" onPress={toggleModal} />
         </View>
       </Modal>
     </View>

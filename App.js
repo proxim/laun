@@ -2,8 +2,9 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import TimerScreen from './screens/TimerScreen';
 import Dashboard from './screens/Dashboard';
+import TimerScreen from './screens/TimerScreen';
+import TimerScreenDryer from './screens/TimerScreenDryer';
 import SampleScreen from './screens/SampleScreen';
 import ThankYouScreen from './screens/ThankYouScreen';
 
@@ -22,6 +23,10 @@ const App = () => {
         <Stack.Screen 
           name="Timer"
           component={TimerScreen}
+        />
+        <Stack.Screen 
+          name="TimerDryer"
+          component={TimerScreenDryer}
         />
         <Stack.Screen 
           name="SampleScreen"

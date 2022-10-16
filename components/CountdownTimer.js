@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 import { sendText } from '../clients/TwilioClient';
+import LText from './LText';
 
 const CountdownTimer = ({ resetCount }) => (
     <CountdownCircleTimer
@@ -13,10 +14,10 @@ const CountdownTimer = ({ resetCount }) => (
         onComplete={() => {sendText('Your laundry is finished!')}}
     >
     {({ remainingTime }) => 
-    <Text style={styles.text}>
+    <LText style={styles.text}>
         Laundry done in{'\n'}
         {new Date(remainingTime * 1000).toISOString().substring(14, 19)}
-    </Text>}
+    </LText>}
   </CountdownCircleTimer>
 )
 
