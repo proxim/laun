@@ -7,11 +7,16 @@ const TimerScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
         <CountdownTimer resetCount={resetCount}/>
-        <Button title='restart' onPress={() => setResetCount(prevCount => prevCount + 1)}/>
+        <Button 
+            title='restart'
+            onPress={() => 
+                setResetCount(prevCount => prevCount + 1)
+            }
+        />
         <Button
-            title='go to sample screen'
+            title='go to Dashboard'
             onPress={() =>
-                navigation.navigate('SampleScreen', {someInfo: 'Some context here!'})
+                navigation.navigate('Dash', 'Dashboard')
             }
         />
         </SafeAreaView>
